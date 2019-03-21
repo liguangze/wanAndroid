@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+
+
+/**竖直方向的TabLayout*/
+    
+    <declare-styleable name="VerticalTabLayout">
+        <attr name="indicator_color" format="color" />
+        <attr name="indicator_width" format="dimension" />
+        <attr name="indicator_corners" format="dimension" />
+        <attr name="indicator_gravity" format="enum">
+            <enum name="left" value="3" />
+            <enum name="right" value="5" />
+            <enum name="fill" value="119" />
+        </attr>
+        <attr name="tab_margin" format="dimension" />
+        <attr name="tab_mode" format="enum">
+            <enum name="fixed" value="10" />
+            <enum name="scrollable" value="11" />
+        </attr>
+        <attr name="tab_height" format="dimension">
+        </attr>
+    </declare-styleable>
+
+
+    <string-array name="spinner_price_titles">
+            <item>a</item>
+        <item>b</item>
+        <item>c</item>
+        <item>d</item>
+    </string-array>
+
+
+    /**recycleView显示的轮播图*/
+    <declare-styleable name="BannerIndicator">
+        <!-- 圆点的颜色 -->
+        <attr name="selectColor" format="color" />
+        <!-- 未选中圆点的颜色 -->
+        <attr name="unselectedColor" format="color" />
+        <!-- 圆点的大小 -->
+        <attr name="radius" format="dimension" />
+        <!-- 圆点间间距的大小 -->
+        <attr name="space" format="dimension" />
+    </declare-styleable>
+
+
+    /**流式布局*/
+    <declare-styleable name="TagFlowLayout">
+        <attr name="max_select" format="integer"></attr>
+        <attr name="tag_gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+    /**表格布局*/
+    <declare-styleable name="TableLayout">
+        <attr name="tableMode" format="enum">
+            <enum name="auto" value="0" />
+            <enum name="equallyDivide" value="1" />
+        </attr>
+        <attr name="tableRowHeight" format="dimension" />
+        <attr name="tableDividerSize" format="dimension" />
+        <attr name="tableDividerColor" format="color" />
+        <attr name="tableColumnPadding" format="dimension" />
+        <attr name="tableTextGravity" format="enum">
+            <enum name="center" value="0" />
+            <enum name="leftCenter" value="1" />
+            <enum name="rightCenter" value="2" />
+        </attr>
+        <attr name="tableTextSize" format="dimension" />
+        <attr name="tableTextColor" format="color" />
+        <attr name="tableTextColorSelected" format="color" />
+        <attr name="backgroundColorSelected" format="color" />
+    </declare-styleable>
+
+
+    /**自适应textView*/
+    <declare-styleable name="AutofitTextView">
+        <attr name="sizeToFit" format="boolean" />
+        <attr name="minTextSize" format="dimension" />
+        <attr name="precision" format="dimension" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common_base/common_base.iml" filepath="$PROJECT_DIR$/common_base/common_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_knowledge/module_knowledge.iml" filepath="$PROJECT_DIR$/module_knowledge/module_knowledge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_main/module_main.iml" filepath="$PROJECT_DIR$/module_main/module_main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_navigation/module_navigation.iml" filepath="$PROJECT_DIR$/module_navigation/module_navigation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_user/module_user.iml" filepath="$PROJECT_DIR$/module_user/module_user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wanAndroidZuJianhuaWorkspace.iml" filepath="$PROJECT_DIR$/wanAndroidZuJianhuaWorkspace.iml" />
+    </modules>
+  </component>
+</project>

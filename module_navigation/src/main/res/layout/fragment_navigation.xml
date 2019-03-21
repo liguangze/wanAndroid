@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/white"
+      android:orientation="horizontal">
+
+
+    <wanandroid.li.com.module_navigation.customview.VerticalTabLayout
+
+        android:id="@+id/tablayout"
+        android:layout_width="@dimen/dp_88"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="visible"
+        app:indicator_color="@color/home_view"
+        app:indicator_gravity="fill"
+        app:tab_height="@dimen/dp_50"
+        app:tab_mode="scrollable"
+        />
+
+    <View
+        android:layout_width="@dimen/dp_10"
+        android:layout_height="match_parent"
+        android:background="@color/home_view"/>
+
+    <wanandroid.li.com.module_navigation.customview.ViewPagerSlide
+        android:id="@+id/verticalviewpager"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"/>
+  </LinearLayout>
+</RelativeLayout>

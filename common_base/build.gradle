@@ -1,0 +1,74 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion rootProject.ext.versions.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.versions.minSdkVersion
+        targetSdkVersion rootProject.ext.versions.targetSdkVersion
+        versionCode rootProject.ext.versions.versionCode
+        versionName rootProject.ext.versions.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //Arouter路由配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+                includeCompileClasspath = true
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    // 在项目中的libs中的所有的.jar结尾的文件，都是依赖
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //把implementation 用api代替,它是对外部公开的, 所有其他的module就不需要添加该依赖
+    api rootProject.ext.dependencies["appcompat_v7"]
+    api rootProject.ext.dependencies["constraint_layout"]
+    api rootProject.ext.dependencies["cardview-v7"]
+    api rootProject.ext.dependencies["recyclerview-v7"]
+    api rootProject.ext.dependencies["support-v4"]
+    api rootProject.ext.dependencies["design"]
+    api rootProject.ext.dependencies["support_annotations"]
+
+    //MultiDex分包方法
+    api rootProject.ext.dependencies["multidex"]
+    //黄油刀
+    annotationProcessor rootProject.ext.dependencies["butterknife_compiler"]
+    api rootProject.ext.dependencies["butterknife"]
+
+    //Arouter路由
+    annotationProcessor rootProject.ext.dependencies["arouter_compiler"]
+    api rootProject.ext.dependencies["arouter_api"]
+    api rootProject.ext.dependencies["arouter_annotation"]
+    //eventbus 发布/订阅事件总线
+    api rootProject.ext.dependencies["eventbus"]
+    //rxjava2
+    api rootProject.ext.dependencies["rxjava2"]
+    //retrofit
+    api rootProject.ext.dependencies["retrofit"]
+
+    api rootProject.ext.dependencies["gson"]
+    //fastJson
+    api rootProject.ext.dependencies["fastjson"]
+
+    api rootProject.ext.dependencies["glide"]
+
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.youth.banner:banner:1.4.10'  //最新版本
+    /**
+     * 上拉刷新下拉加载
+     */
+    compile 'com.lcodecorex:tkrefreshlayout:1.0.7'
+
+
+    compile 'com.zhy:base-rvadapter:3.0.3'
+    compile 'com.zhy:base-adapter:3.0.3'
+}

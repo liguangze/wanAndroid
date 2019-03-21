@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.versions.compileSdkVersion
+    defaultConfig {
+        applicationId rootProject.ext.versions.applicationId
+        minSdkVersion rootProject.ext.versions.minSdkVersion
+        targetSdkVersion rootProject.ext.versions.targetSdkVersion
+        versionCode rootProject.ext.versions.versionCode
+        versionName rootProject.ext.versions.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    annotationProcessor rootProject.ext.dependencies["butterknife_compiler"]
+
+//    //公用依赖包
+    implementation project(':common_base')
+    if (!Boolean.valueOf(rootProject.ext.isMainModule)) {
+        //main模块
+        implementation project(':module_main')
+    }
+
+    if (!Boolean.valueOf(rootProject.ext.isUserModule)) {
+        //main模块
+        implementation project(':module_user')
+
+    }
+
+
+    if (!Boolean.valueOf(rootProject.ext.isKonwledgeModule)) {
+        //知识体系模块
+        implementation project(':module_knowledge')
+
+    }
+
+
+    if (!Boolean.valueOf(rootProject.ext.isNavigationModule)) {
+        //导航模块
+        implementation project(':module_navigation')
+
+    }
+
+}

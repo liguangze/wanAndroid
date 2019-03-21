@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <FrameLayout
+                android:id="@+id/fl_context"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/ll_bottom"
+                android:background="@color/bg" />
+
+            <include
+                android:layout_above="@+id/fl_context"
+                layout="@layout/main_action_bar"
+                />
+            <RelativeLayout
+                android:id="@+id/ll_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white">
+                <RadioGroup
+                    android:id="@+id/rg_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <RadioButton
+                        android:id="@+id/rb_main"
+                        style="@style/MainTabStyle"
+                        android:checked="true"
+                        android:drawablePadding="3dp"
+                        android:drawableTop="@drawable/main_tab_home"
+                        android:text="@string/main_tab_home" />
+                    <RadioButton
+                        android:id="@+id/rb_knowledge"
+                        style="@style/MainTabStyle"
+                        android:drawablePadding="3dp"
+                        android:drawableTop="@drawable/main_tab_knowledge"
+                        android:text="@string/main_tab_knowledge" />
+
+                    <RadioButton
+                        android:id="@+id/rb_navigation"
+                        style="@style/MainTabStyle"
+                        android:drawablePadding="3dp"
+                        android:drawableTop="@drawable/main_tab_navitation"
+                        android:text="@string/main_tab_navigation" />
+
+                    <RadioButton
+                        android:id="@+id/rb_user"
+                        style="@style/MainTabStyle"
+                        android:drawablePadding="3dp"
+                        android:drawableTop="@drawable/main_tab_user"
+                        android:text="@string/main_tab_user" />
+                </RadioGroup>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/main_left"
+            android:background="@color/gray"
+            android:layout_gravity="start"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="match_parent">
+
+            <include
+                layout="@layout/drawer_layout"
+                />
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
